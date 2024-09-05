@@ -1,25 +1,39 @@
-let header = document.querySelector("header")
+let header = document.createElement('div');
+header.classList.add('header');
 
-header.innerHTML=`
-<div class="header">
-    <p>TechMap</p>
+let titulo = document.createElement('p');
+let tituloTexto = document.createTextNode('TechMap');
+titulo.appendChild(tituloTexto);
+header.appendChild(titulo);
 
-    <div class="opciones">
-       <p>SSD</p>
-       <p>RAM</p>
-       <p>HDD</p>
-       <p>GPU</p>
-       <p>CPU</p>
-       <p>FUENTE DE PODER</p>
-       <p>PLACA MADRE</p>
-    </div>
+let opciones = document.createElement('div');
+opciones.classList.add('opciones');
 
-    <div>
-    <button class="botongit">
-        <a href="https://github.com/ROCKEMMA/techMap-benjhamin">GITHUB</a>
-    </button>
-    </div>
-    </div>
-`
+let opcionesTexto = ['SSD', 'RAM', 'HDD', 'GPU', 'CPU', 'FUENTE DE PODER', 'PLACA MADRE'];
+opcionesTexto.forEach(function(texto) {
+    let opcion = document.createElement('p');
+    opcion.textContent = texto;
+    opciones.appendChild(opcion);
+});
+
+header.appendChild(opciones);
+
+let divboton = document.createElement('div');
+let boton = document.createElement('button');
+boton.classList.add('botongit');
+
+let enlace = document.createElement('a');
+enlace.href = 'https://github.com/ROCKEMMA/techMap-benjhamin';
+enlace.textContent = 'GITHUB';
+
+boton.appendChild(enlace);
+divboton.appendChild(boton);
+header.appendChild(divboton);
+
+
+
+document.body.appendChild(header);
+
+
 
 export {header}
