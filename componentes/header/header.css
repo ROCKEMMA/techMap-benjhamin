@@ -1,0 +1,86 @@
+.header{
+    background-color: rgb(56, 66, 66);
+    height: auto;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+
+    justify-content: space-between;
+}
+
+.opciones{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.botongit {
+    background-color: black;
+    display: flex;
+    font-size: 0.5rem;
+    height: 30px;
+    font-size: 20px; 
+    border-radius: 1    0px; 
+}
+
+.botongit a{
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* Media query para pantallas de 1366px */
+@media (max-width: 1366px) {
+ 
+   
+}
+
+/* Media query para pantallas de 480px */
+@media (max-width: 480px) {
+    .header {
+        font-size: 16px;
+        align-items: flex-start;
+    }
+
+    .opciones {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .botongit {
+        height: 25px;
+        font-size: 16px;
+    }
+}
+
+/* Media query para pantallas de 375px */
+@media (max-width: 375px) {
+    .header {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .opciones {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 0.25rem;
+        font-size: 12px;
+    }
+
+    .botongit {
+        height: 22px;
+        font-size: 14px;
+    }
+}
