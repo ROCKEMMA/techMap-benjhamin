@@ -4,6 +4,7 @@
     width: 100%;
     font-size: 25px;
     color: white;
+    font-family: monospace;
 
     display: flex;
     flex-direction: row;
@@ -38,13 +39,11 @@
     color: white;
 }
 
-/* Media query para pantallas de 1366px */
 @media (max-width: 1366px) {
- 
-   
+
 }
 
-/* Media query para pantallas de 480px */
+
 @media (max-width: 480px) {
     .header {
         font-size: 16px;
@@ -63,7 +62,7 @@
     }
 }
 
-/* Media query para pantallas de 375px */
+
 @media (max-width: 375px) {
     .header {
         font-size: 16px;
